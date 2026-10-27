@@ -1,0 +1,577 @@
+[
+  {
+    "id": "V01",
+    "name": "Ananya Rao",
+    "email": "ananya@helpinghands.org",
+    "maxWeeklyHours": 14,
+    "skills": {
+      "first aid": 3,
+      "logistics": 2,
+      "event setup": 2
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T17:00",
+        "end": "2026-11-02T21:00"
+      },
+      {
+        "start": "2026-11-03T17:00",
+        "end": "2026-11-03T21:00"
+      },
+      {
+        "start": "2026-11-04T17:00",
+        "end": "2026-11-04T21:00"
+      },
+      {
+        "start": "2026-11-05T17:00",
+        "end": "2026-11-05T21:00"
+      },
+      {
+        "start": "2026-11-06T17:00",
+        "end": "2026-11-06T21:00"
+      },
+      {
+        "start": "2026-11-07T08:00",
+        "end": "2026-11-07T18:00"
+      },
+      {
+        "start": "2026-11-08T08:00",
+        "end": "2026-11-08T18:00"
+      }
+    ]
+  },
+  {
+    "id": "V02",
+    "name": "Rohan Mehta",
+    "email": "rohan@helpinghands.org",
+    "maxWeeklyHours": 14,
+    "skills": {
+      "driving": 4,
+      "logistics": 3
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T07:00",
+        "end": "2026-11-02T19:00"
+      },
+      {
+        "start": "2026-11-04T07:00",
+        "end": "2026-11-04T19:00"
+      },
+      {
+        "start": "2026-11-06T07:00",
+        "end": "2026-11-06T19:00"
+      },
+      {
+        "start": "2026-11-07T07:00",
+        "end": "2026-11-07T19:00"
+      }
+    ]
+  },
+  {
+    "id": "V03",
+    "name": "Priya Nair",
+    "email": "priya@helpinghands.org",
+    "maxWeeklyHours": 12,
+    "skills": {
+      "teaching": 4,
+      "tech support": 3
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T16:00",
+        "end": "2026-11-02T20:00"
+      },
+      {
+        "start": "2026-11-03T16:00",
+        "end": "2026-11-03T20:00"
+      },
+      {
+        "start": "2026-11-04T16:00",
+        "end": "2026-11-04T20:00"
+      },
+      {
+        "start": "2026-11-05T16:00",
+        "end": "2026-11-05T20:00"
+      },
+      {
+        "start": "2026-11-06T16:00",
+        "end": "2026-11-06T20:00"
+      },
+      {
+        "start": "2026-11-07T09:00",
+        "end": "2026-11-07T13:00"
+      }
+    ]
+  },
+  {
+    "id": "V04",
+    "name": "Karthik Iyer",
+    "email": "karthik@helpinghands.org",
+    "maxWeeklyHours": 15,
+    "skills": {
+      "cooking": 4,
+      "logistics": 2,
+      "first aid": 2
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T06:00",
+        "end": "2026-11-02T14:00"
+      },
+      {
+        "start": "2026-11-03T06:00",
+        "end": "2026-11-03T14:00"
+      },
+      {
+        "start": "2026-11-04T06:00",
+        "end": "2026-11-04T14:00"
+      },
+      {
+        "start": "2026-11-05T06:00",
+        "end": "2026-11-05T14:00"
+      },
+      {
+        "start": "2026-11-06T06:00",
+        "end": "2026-11-06T14:00"
+      },
+      {
+        "start": "2026-11-07T06:00",
+        "end": "2026-11-07T14:00"
+      },
+      {
+        "start": "2026-11-08T06:00",
+        "end": "2026-11-08T14:00"
+      }
+    ]
+  },
+  {
+    "id": "V05",
+    "name": "Sneha Reddy",
+    "email": "sneha@helpinghands.org",
+    "maxWeeklyHours": 10,
+    "skills": {
+      "teaching": 3,
+      "event setup": 3
+    },
+    "availability": [
+      {
+        "start": "2026-11-07T08:00",
+        "end": "2026-11-07T20:00"
+      },
+      {
+        "start": "2026-11-08T08:00",
+        "end": "2026-11-08T20:00"
+      }
+    ]
+  },
+  {
+    "id": "V06",
+    "name": "Arjun Kulkarni",
+    "email": "arjun@helpinghands.org",
+    "maxWeeklyHours": 12,
+    "skills": {
+      "tech support": 4,
+      "teaching": 2
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T18:00",
+        "end": "2026-11-02T21:00"
+      },
+      {
+        "start": "2026-11-03T18:00",
+        "end": "2026-11-03T21:00"
+      },
+      {
+        "start": "2026-11-04T18:00",
+        "end": "2026-11-04T21:00"
+      },
+      {
+        "start": "2026-11-05T18:00",
+        "end": "2026-11-05T21:00"
+      },
+      {
+        "start": "2026-11-06T18:00",
+        "end": "2026-11-06T21:00"
+      },
+      {
+        "start": "2026-11-07T10:00",
+        "end": "2026-11-07T18:00"
+      },
+      {
+        "start": "2026-11-08T10:00",
+        "end": "2026-11-08T18:00"
+      }
+    ]
+  },
+  {
+    "id": "V07",
+    "name": "Meera Pillai",
+    "email": "meera@helpinghands.org",
+    "maxWeeklyHours": 10,
+    "skills": {
+      "first aid": 5,
+      "cooking": 2
+    },
+    "availability": [
+      {
+        "start": "2026-11-03T08:00",
+        "end": "2026-11-03T20:00"
+      },
+      {
+        "start": "2026-11-05T08:00",
+        "end": "2026-11-05T20:00"
+      },
+      {
+        "start": "2026-11-07T08:00",
+        "end": "2026-11-07T20:00"
+      }
+    ]
+  },
+  {
+    "id": "V08",
+    "name": "Vikram Shetty",
+    "email": "vikram@helpinghands.org",
+    "maxWeeklyHours": 14,
+    "skills": {
+      "driving": 3,
+      "event setup": 4,
+      "logistics": 3
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T07:00",
+        "end": "2026-11-02T13:00"
+      },
+      {
+        "start": "2026-11-03T07:00",
+        "end": "2026-11-03T13:00"
+      },
+      {
+        "start": "2026-11-04T07:00",
+        "end": "2026-11-04T13:00"
+      },
+      {
+        "start": "2026-11-05T07:00",
+        "end": "2026-11-05T13:00"
+      },
+      {
+        "start": "2026-11-06T07:00",
+        "end": "2026-11-06T13:00"
+      },
+      {
+        "start": "2026-11-07T07:00",
+        "end": "2026-11-07T13:00"
+      },
+      {
+        "start": "2026-11-08T07:00",
+        "end": "2026-11-08T13:00"
+      }
+    ]
+  },
+  {
+    "id": "V09",
+    "name": "Divya Menon",
+    "email": "divya@helpinghands.org",
+    "maxWeeklyHours": 14,
+    "skills": {
+      "cooking": 3,
+      "teaching": 2
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T06:00",
+        "end": "2026-11-02T12:00"
+      },
+      {
+        "start": "2026-11-03T06:00",
+        "end": "2026-11-03T12:00"
+      },
+      {
+        "start": "2026-11-04T06:00",
+        "end": "2026-11-04T12:00"
+      },
+      {
+        "start": "2026-11-05T06:00",
+        "end": "2026-11-05T12:00"
+      },
+      {
+        "start": "2026-11-06T06:00",
+        "end": "2026-11-06T12:00"
+      },
+      {
+        "start": "2026-11-07T06:00",
+        "end": "2026-11-07T15:00"
+      },
+      {
+        "start": "2026-11-08T06:00",
+        "end": "2026-11-08T15:00"
+      }
+    ]
+  },
+  {
+    "id": "V10",
+    "name": "Aditya Joshi",
+    "email": "aditya@helpinghands.org",
+    "maxWeeklyHours": 14,
+    "skills": {
+      "logistics": 2,
+      "driving": 3,
+      "event setup": 2
+    },
+    "availability": [
+      {
+        "start": "2026-11-04T06:00",
+        "end": "2026-11-04T12:00"
+      },
+      {
+        "start": "2026-11-06T06:00",
+        "end": "2026-11-06T12:00"
+      },
+      {
+        "start": "2026-11-07T06:00",
+        "end": "2026-11-07T19:00"
+      },
+      {
+        "start": "2026-11-08T06:00",
+        "end": "2026-11-08T19:00"
+      }
+    ]
+  },
+  {
+    "id": "V11",
+    "name": "Kavya Hegde",
+    "email": "kavya@helpinghands.org",
+    "maxWeeklyHours": 12,
+    "skills": {
+      "tech support": 2,
+      "event setup": 2,
+      "teaching": 3
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T15:00",
+        "end": "2026-11-02T21:00"
+      },
+      {
+        "start": "2026-11-03T15:00",
+        "end": "2026-11-03T21:00"
+      },
+      {
+        "start": "2026-11-04T15:00",
+        "end": "2026-11-04T21:00"
+      },
+      {
+        "start": "2026-11-05T15:00",
+        "end": "2026-11-05T21:00"
+      },
+      {
+        "start": "2026-11-06T15:00",
+        "end": "2026-11-06T21:00"
+      }
+    ]
+  },
+  {
+    "id": "V12",
+    "name": "Siddharth Das",
+    "email": "siddharth@helpinghands.org",
+    "maxWeeklyHours": 12,
+    "skills": {
+      "first aid": 3,
+      "driving": 3
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T06:00",
+        "end": "2026-11-02T22:00"
+      },
+      {
+        "start": "2026-11-04T06:00",
+        "end": "2026-11-04T22:00"
+      },
+      {
+        "start": "2026-11-06T06:00",
+        "end": "2026-11-06T22:00"
+      }
+    ]
+  },
+  {
+    "id": "V13",
+    "name": "Ishita Banerjee",
+    "email": "ishita@helpinghands.org",
+    "maxWeeklyHours": 12,
+    "skills": {
+      "cooking": 3,
+      "event setup": 2,
+      "logistics": 2
+    },
+    "availability": [
+      {
+        "start": "2026-11-05T06:00",
+        "end": "2026-11-05T18:00"
+      },
+      {
+        "start": "2026-11-06T06:00",
+        "end": "2026-11-06T18:00"
+      },
+      {
+        "start": "2026-11-07T07:00",
+        "end": "2026-11-07T18:00"
+      },
+      {
+        "start": "2026-11-08T07:00",
+        "end": "2026-11-08T18:00"
+      }
+    ]
+  },
+  {
+    "id": "V14",
+    "name": "Nikhil Gowda",
+    "email": "nikhil@helpinghands.org",
+    "maxWeeklyHours": 16,
+    "skills": {
+      "logistics": 4,
+      "event setup": 3,
+      "cooking": 1
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T08:00",
+        "end": "2026-11-02T18:00"
+      },
+      {
+        "start": "2026-11-03T08:00",
+        "end": "2026-11-03T18:00"
+      },
+      {
+        "start": "2026-11-04T08:00",
+        "end": "2026-11-04T18:00"
+      },
+      {
+        "start": "2026-11-05T08:00",
+        "end": "2026-11-05T18:00"
+      },
+      {
+        "start": "2026-11-06T08:00",
+        "end": "2026-11-06T18:00"
+      },
+      {
+        "start": "2026-11-07T08:00",
+        "end": "2026-11-07T18:00"
+      },
+      {
+        "start": "2026-11-08T08:00",
+        "end": "2026-11-08T18:00"
+      }
+    ]
+  },
+  {
+    "id": "V15",
+    "name": "Pooja Srinivas",
+    "email": "pooja@helpinghands.org",
+    "maxWeeklyHours": 10,
+    "skills": {
+      "teaching": 5,
+      "first aid": 1
+    },
+    "availability": [
+      {
+        "start": "2026-11-03T15:00",
+        "end": "2026-11-03T20:00"
+      },
+      {
+        "start": "2026-11-05T15:00",
+        "end": "2026-11-05T20:00"
+      },
+      {
+        "start": "2026-11-08T09:00",
+        "end": "2026-11-08T14:00"
+      }
+    ]
+  },
+  {
+    "id": "V16",
+    "name": "Rahul Bhat",
+    "email": "rahul@helpinghands.org",
+    "maxWeeklyHours": 10,
+    "skills": {
+      "tech support": 3,
+      "logistics": 1
+    },
+    "availability": [
+      {
+        "start": "2026-11-02T17:00",
+        "end": "2026-11-02T21:00"
+      },
+      {
+        "start": "2026-11-04T17:00",
+        "end": "2026-11-04T21:00"
+      },
+      {
+        "start": "2026-11-06T17:00",
+        "end": "2026-11-06T21:00"
+      },
+      {
+        "start": "2026-11-07T13:00",
+        "end": "2026-11-07T19:00"
+      }
+    ]
+  },
+  {
+    "id": "V17",
+    "name": "Tanvi Kapoor",
+    "email": "tanvi@helpinghands.org",
+    "maxWeeklyHours": 12,
+    "skills": {
+      "first aid": 3,
+      "cooking": 3
+    },
+    "availability": [
+      {
+        "start": "2026-11-03T06:00",
+        "end": "2026-11-03T14:00"
+      },
+      {
+        "start": "2026-11-05T06:00",
+        "end": "2026-11-05T14:00"
+      },
+      {
+        "start": "2026-11-07T06:00",
+        "end": "2026-11-07T15:00"
+      },
+      {
+        "start": "2026-11-08T06:00",
+        "end": "2026-11-08T15:00"
+      }
+    ]
+  },
+  {
+    "id": "V18",
+    "name": "Harsha Murthy",
+    "email": "harsha@helpinghands.org",
+    "maxWeeklyHours": 12,
+    "skills": {
+      "driving": 5,
+      "logistics": 2
+    },
+    "availability": [
+      {
+        "start": "2026-11-03T05:00",
+        "end": "2026-11-03T15:00"
+      },
+      {
+        "start": "2026-11-05T05:00",
+        "end": "2026-11-05T15:00"
+      },
+      {
+        "start": "2026-11-07T05:00",
+        "end": "2026-11-07T15:00"
+      },
+      {
+        "start": "2026-11-08T05:00",
+        "end": "2026-11-08T15:00"
+      }
+    ]
+  }
+]

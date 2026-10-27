@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shift Balancer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="mark">SB</div>
+    <div>
+      <h1>Shift Balancer</h1>
+      <p id="weekLabel" class="muted">Loading…</p>
+    </div>
+  </div>
+  <div class="controls">
+    <button id="evtBtn">Events</button>
+    <button id="volBtn">Volunteers</button>
+    <span class="sep"></span>
+    <label class="select">
+      <span>Strategy</span>
+      <select id="strategy"></select>
+    </label>
+    <button id="runBtn" class="primary">Run balancer</button>
+    <span class="sep"></span>
+    <button id="undoBtn" title="Undo">↶ Undo</button>
+    <button id="redoBtn" title="Redo">↷ Redo</button>
+    <button id="clearBtn">Clear</button>
+    <span class="sep"></span>
+    <a class="btn" href="/api/export?format=json">Export JSON</a>
+    <a class="btn" href="/api/export?format=csv">Export CSV</a>
+    <button id="importBtn">Import…</button>
+  </div>
+</header>
+
+<section class="kpis" id="kpis"></section>
+
+<main class="layout">
+  <section class="board-wrap">
+    <div class="section-head">
+      <h2>Week board</h2>
+      <div class="legend">
+        <span><i class="dot full"></i>Fully staffed</span>
+        <span><i class="dot partial"></i>Partial</span>
+        <span><i class="dot open"></i>Open</span>
+        <span class="muted">Click a name to swap · × to remove · 📌 = pinned manual edit</span>
+      </div>
+    </div>
+    <div class="board" id="board"></div>
+  </section>
+
+  <aside class="side">
+    <div class="section-head"><h2>Workload</h2><span id="spread" class="muted"></span></div>
+    <div id="loads" class="loads"></div>
+  </aside>
+</main>
+
+<section class="bottom">
+  <nav class="tabs" id="tabs">
+    <button data-tab="diagnostics" class="active">Uncovered shifts</button>
+    <button data-tab="violations">Rule violations</button>
+    <button data-tab="reports">SQL reports</button>
+    <button data-tab="activity">Activity</button>
+  </nav>
+  <div id="tabBody" class="tab-body"></div>
+</section>
+
+<div id="drawer" class="drawer hidden">
+  <div class="drawer-card">
+    <div class="drawer-head">
+      <div>
+        <h3 id="drawerTitle"></h3>
+        <p id="drawerSub" class="muted"></p>
+      </div>
+      <button id="drawerClose" class="ghost">✕</button>
+    </div>
+    <div id="drawerBody"></div>
+  </div>
+</div>
+
+<div id="importModal" class="drawer hidden">
+  <div class="drawer-card">
+    <div class="drawer-head">
+      <div>
+        <h3>Import dataset</h3>
+        <p class="muted">Replaces all volunteers, shifts and assignments.</p>
+      </div>
+      <button id="importClose" class="ghost">✕</button>
+    </div>
+    <div class="import-form">
+      <label>Volunteers file (.json or .csv) <input type="file" id="volFile" accept=".json,.csv"></label>
+      <label>Shifts file (.json or .csv) <input type="file" id="shiftFile" accept=".json,.csv"></label>
+      <button id="importGo" class="primary">Import</button>
+    </div>
+  </div>
+</div>
+
+<div id="volModal" class="drawer hidden">
+  <div class="drawer-card">
+    <div class="drawer-head">
+      <div>
+        <h3>Volunteers</h3>
+        <p class="muted">Add everyone who can help this week. After each change, the balancer re-divides everyone across the shifts.</p>
+      </div>
+      <button id="volClose" class="ghost">✕</button>
+    </div>
+    <form id="volForm" class="vol-form" autocomplete="off">
+      <label>Name <input type="text" name="vname" required maxlength="100"></label>
+      <div class="row2">
+        <label>Email (optional) <input type="email" name="email" maxlength="120"></label>
+        <label>Max hours / week <input type="number" name="max" min="1" max="80" value="10" required></label>
+      </div>
+      <fieldset>
+        <legend>Skills</legend>
+        <p class="muted">Tick what they can do and set their level: 1 = beginner, 5 = expert.</p>
+        <div id="volSkills"></div>
+        <div class="pick-row"><input type="text" id="newSkill" placeholder="Another skill, e.g. first aid" maxlength="50">
+          <button type="button" id="addSkillBtn" class="small">Add skill</button></div>
+      </fieldset>
+      <fieldset>
+        <legend>Available</legend>
+        <p class="muted">Tick the days they can come and the hours they're free.</p>
+        <div id="volDays"></div>
+        <div class="pick-row"><input type="date" id="newDay"><button type="button" id="addDayBtn" class="small">Add date</button></div>
+      </fieldset>
+      <button type="submit" class="primary">Add volunteer</button>
+    </form>
+    <div class="section-head"><h2>Added</h2><span id="volCount" class="muted"></span></div>
+    <div id="volList"></div>
+  </div>
+</div>
+
+<div id="evtModal" class="drawer hidden">
+  <div class="drawer-card">
+    <div class="drawer-head">
+      <div>
+        <h3>Events</h3>
+        <p class="muted">Add each event that needs volunteers. After each change, the balancer re-divides everyone across the events.</p>
+      </div>
+      <button id="evtClose" class="ghost">✕</button>
+    </div>
+    <form id="evtForm" class="vol-form" autocomplete="off">
+      <label>Event name <input type="text" name="ename" required maxlength="120" placeholder="e.g. Food bank sorting"></label>
+      <label>Location (optional) <input type="text" name="loc" maxlength="120"></label>
+      <div class="row3">
+        <label>Date <input type="date" name="date" required></label>
+        <label>Starts <input type="time" name="from" value="09:00" required></label>
+        <label>Ends <input type="time" name="to" value="12:00" required></label>
+      </div>
+      <div class="row2">
+        <label>Skill needed <input type="text" name="skill" list="skillList" required maxlength="50" placeholder="e.g. cooking"></label>
+        <label>Minimum level <select name="level"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+      </div>
+      <datalist id="skillList"></datalist>
+      <div class="row2">
+        <label>Volunteers needed <input type="number" name="needed" min="1" max="100" value="2" required></label>
+        <label>Priority <select name="prio"><option value="1">Low</option><option value="2" selected>Normal</option><option value="3">Critical</option></select></label>
+      </div>
+      <button type="submit" class="primary">Add event</button>
+    </form>
+    <div class="section-head"><h2>Added</h2><span id="evtCount" class="muted"></span></div>
+    <div id="evtList"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="/app.js"></script>
+</body>
+</html>
